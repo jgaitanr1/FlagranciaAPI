@@ -27,7 +27,6 @@ namespace apiFlagrancia.Utilidades
             CreateMap<CreateFlagranciaDTO, Flagrancia>();
 
             CreateMap<DFlagrancia, DFlagranciaDTO>()
-                .ForMember(p => p.flagrancia, options => options.Ignore())
                 .ForMember(p => p.NombreFlagrante, options => options.Ignore())
                 .ForMember(p => p.DocumentoFlagrante, options => options.Ignore())
                 .ReverseMap();

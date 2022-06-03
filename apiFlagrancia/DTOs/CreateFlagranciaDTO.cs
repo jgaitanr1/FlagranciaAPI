@@ -14,11 +14,11 @@ namespace apiFlagrancia.DTOs
         public String SituacionJuridica { get; set; }
         public String Sentencia { get; set; }
         public String Latitud { get; set; }
-        public String Altitud { get; set; }
+        public String Longitud { get; set; }
         [Required]
         public String UsuarioRegistro { get; set; }
         [Required]
-        public DateTime FecRegistro { get; set; }
+        public String FecRegistro { get; set; }
         [Required]
         public String EstadoFlagrante { get; set; }
         public Boolean Estado { get; set; }
