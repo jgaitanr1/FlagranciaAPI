@@ -79,5 +79,28 @@ namespace apiFlagrancia.Controllers
             }
             return mapper.Map<List<FlagranciaDTO>>(entity);
         }
+
+        [HttpGet("mp")]
+        public ActionResult<List<FlagranciaDTO>> GetMP()
+        {
+            // var entity = applicationDbContext.Flagrancias.Where(u => !u.EstadoFlagrante.Equals("Resuelto") || !u.EstadoFlagrante.Equals("Poder Judicial")).Select(AsFlagranciaDto);
+            var entity = applicationDbContext.Flagrancias.Where(u => !u.EstadoFlagrante.Equals("Poder Judicial")).Where(u => !u.EstadoFlagrante.Equals("Resuelto")).Select(AsFlagranciaDto);
+            if (entity == null)
+            {
+                return NotFound();
+            }
+            return mapper.Map<List<FlagranciaDTO>>(entity);
+        }
+
+        [HttpGet("pj")]
+        public ActionResult<List<FlagranciaDTO>> GetPJ()
+        {
+            var entity = applicationDbContext.Flagrancias.Where(u => !u.EstadoFlagrante.Equals("Resuelto")).Select(AsFlagranciaDto);
+            if (entity == null)
+            {
+                return NotFound();
+            }
+            return mapper.Map<List<FlagranciaDTO>>(entity);
+        }
     }
 }
