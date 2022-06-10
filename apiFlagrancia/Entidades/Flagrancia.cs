@@ -12,6 +12,8 @@ namespace apiFlagrancia.Entidades
         public String Documento { get; set; }
         public String SituacionJuridica { get; set; }
         public String Sentencia { get; set; }
+        public String Audiencia { get; set; }
+        public String Acusacion { get; set; }
         public String Descripcion { get; set; }
         public String Latitud { get; set; }
         public String Longitud { get; set; }

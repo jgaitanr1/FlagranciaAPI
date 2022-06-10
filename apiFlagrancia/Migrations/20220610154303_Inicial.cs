@@ -29,6 +29,8 @@ namespace apiFlagrancia.Migrations
                     Documento = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     SituacionJuridica = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Sentencia = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Audiencia = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Acusacion = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Descripcion = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Latitud = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Longitud = table.Column<string>(type: "nvarchar(max)", nullable: true),

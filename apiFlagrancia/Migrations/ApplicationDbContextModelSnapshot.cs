@@ -70,6 +70,12 @@ namespace apiFlagrancia.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<string>("Acusacion")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Audiencia")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Descripcion")
                         .HasColumnType("nvarchar(max)");
 

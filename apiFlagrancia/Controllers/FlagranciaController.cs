@@ -26,6 +26,8 @@ namespace apiFlagrancia.Controllers
                 Documento = x.Documento,
                 SituacionJuridica = x.SituacionJuridica,
                 Sentencia = x.Sentencia,
+                Audiencia = x.Audiencia,
+                Acusacion = x.Acusacion,
                 Descripcion = x.Descripcion,
                 Latitud = x.Latitud,
                 Longitud = x.Longitud,
@@ -61,7 +63,7 @@ namespace apiFlagrancia.Controllers
                 return NotFound();
             }
             mapper.Map(createDTO, entidad);
-            entidad.FecRegistro = ""+DateTime.Now.ToLocalTime();
+            //entidad.FecRegistro = ""+DateTime.Now.ToLocalTime();
             entidad.EstadoFlagrante = "Ingresado";
 
             applicationDbContext.Entry(entidad).State = EntityState.Modified;

@@ -10,7 +10,7 @@ using apiFlagrancia.Utilidades;
 namespace apiFlagrancia.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20220607163424_Inicial")]
+    [Migration("20220610154303_Inicial")]
     partial class Inicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -71,6 +71,12 @@ namespace apiFlagrancia.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Acusacion")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Audiencia")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Descripcion")
                         .HasColumnType("nvarchar(max)");
