@@ -26,6 +26,7 @@ namespace apiFlagrancia.Controllers
                 Documento = x.Documento,
                 SituacionJuridica = x.SituacionJuridica,
                 Sentencia = x.Sentencia,
+                SentenciaDET = x.SentenciaDET,
                 Audiencia = x.Audiencia,
                 Acusacion = x.Acusacion,
                 Descripcion = x.Descripcion,

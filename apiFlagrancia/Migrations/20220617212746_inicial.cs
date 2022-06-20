@@ -2,7 +2,7 @@
 
 namespace apiFlagrancia.Migrations
 {
-    public partial class Inicial : Migration
+    public partial class inicial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -29,6 +29,7 @@ namespace apiFlagrancia.Migrations
                     Documento = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     SituacionJuridica = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Sentencia = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    SentenciaDET = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Audiencia = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Acusacion = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Descripcion = table.Column<string>(type: "nvarchar(max)", nullable: true),

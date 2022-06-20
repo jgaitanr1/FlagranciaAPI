@@ -103,6 +103,9 @@ namespace apiFlagrancia.Migrations
                     b.Property<string>("Sentencia")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("SentenciaDET")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("SituacionJuridica")
                         .HasColumnType("nvarchar(max)");
 
