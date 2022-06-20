@@ -96,6 +96,17 @@ namespace apiFlagrancia.Controllers
         //    }
         //    return mapper.Map<List<FlagranciaDTO>>(entity);
         //}
+        [HttpGet("nuevospj")]
+        public ActionResult<List<FlagranciaDTO>> GetNuevosPJ()
+        {
+            var entity = applicationDbContext.Flagrancias.Where(u => u.EstadoFlagrante == "Detenido" || u.EstadoFlagrante == "Ingresado" || u.EstadoFlagrante == ("Identificado")).Select(AsFlagranciaDto);
+            if (entity == null)
+            {
+                return NotFound();
+            }
+            return mapper.Map<List<FlagranciaDTO>>(entity);
+        }
+
         [HttpGet("pnp")]
         public ActionResult<List<FlagranciaDTO>> GetPNP()
         {
@@ -122,6 +133,16 @@ namespace apiFlagrancia.Controllers
         public ActionResult<List<FlagranciaDTO>> GetPJ()
         {
             var entity = applicationDbContext.Flagrancias.Where(u => u.EstadoFlagrante.Equals("Poder Judicial") || u.EstadoFlagrante == ("Audiencia")).Select(AsFlagranciaDto);
+            if (entity == null)
+            {
+                return NotFound();
+            }
+            return mapper.Map<List<FlagranciaDTO>>(entity);
+        }
+        [HttpGet("acusacion")]
+        public ActionResult<List<FlagranciaDTO>> GetAcusacion()
+        {
+            var entity = applicationDbContext.Flagrancias.Where(u => u.EstadoFlagrante.Equals("Poder Judicial") || u.EstadoFlagrante == ("Audiencia")).Where(u =>  u.Acusacion == "").Select(AsFlagranciaDto);
             if (entity == null)
             {
                 return NotFound();
