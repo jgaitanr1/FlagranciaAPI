@@ -28,10 +28,10 @@ namespace apiFlagrancia
         {
             services.AddControllers();
             services.AddCors();
-            services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "apiFlagrancia", Version = "v1" });
-            });
+            //services.AddSwaggerGen(c =>
+            //{
+            //    c.SwaggerDoc("v1", new OpenApiInfo { Title = "apiFlagrancia", Version = "v1" });
+            //});
 
             services.AddDbContext<ApplicationDbContext>(o => o.UseSqlServer(Configuration.GetConnectionString("default")));
             services.AddAutoMapper(typeof(Startup));
@@ -44,6 +44,7 @@ namespace apiFlagrancia
             app.UseCors(options =>
             {
                 options.WithOrigins("http://localhost:3000");
+                options.WithOrigins("https://flagranciaapp.azurewebsites.net/");
                 options.AllowAnyMethod();
                 options.AllowAnyHeader();
             });
@@ -51,8 +52,8 @@ namespace apiFlagrancia
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "apiFlagrancia v1"));
+                //app.UseSwagger();
+                //app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "apiFlagrancia v1"));
             }
             else
             {
