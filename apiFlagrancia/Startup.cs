@@ -35,6 +35,7 @@ namespace apiFlagrancia
 
             services.AddDbContext<ApplicationDbContext>(o => o.UseSqlServer(Configuration.GetConnectionString("default")));
             services.AddAutoMapper(typeof(Startup));
+            services.AddHttpContextAccessor();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
