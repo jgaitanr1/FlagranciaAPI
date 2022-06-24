@@ -70,18 +70,18 @@ namespace apiFlagrancia.Controllers
             return NoContent();
         }
 
-        [HttpDelete("{id}")]
-        public async Task<ActionResult> Delete(int id)
-        {
-            var entidad = await applicationDbContext.Set<TEntity>().FirstOrDefaultAsync(c => c.Id == id);
-            if (entidad == null)
-            {
-                return NotFound();
-            }
-            applicationDbContext.Entry(entidad).State = EntityState.Deleted;
-            await applicationDbContext.SaveChangesAsync();
-            return NoContent();
-        }
+        //[HttpDelete("{id}")]
+        //public async Task<ActionResult> Delete(int id)
+        //{
+        //    var entidad = await applicationDbContext.Set<TEntity>().FirstOrDefaultAsync(c => c.Id == id);
+        //    if (entidad == null)
+        //    {
+        //        return NotFound();
+        //    }
+        //    applicationDbContext.Entry(entidad).State = EntityState.Deleted;
+        //    await applicationDbContext.SaveChangesAsync();
+        //    return NoContent();
+        //}
 
     }
 }
