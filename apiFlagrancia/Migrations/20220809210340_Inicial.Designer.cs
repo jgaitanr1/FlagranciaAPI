@@ -10,8 +10,8 @@ using apiFlagrancia.Utilidades;
 namespace apiFlagrancia.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20220617212746_inicial")]
-    partial class inicial
+    [Migration("20220809210340_Inicial")]
+    partial class Inicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -93,10 +93,16 @@ namespace apiFlagrancia.Migrations
                     b.Property<string>("FecRegistro")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Genero")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Latitud")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Longitud")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Nacionalidad")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Nombre")

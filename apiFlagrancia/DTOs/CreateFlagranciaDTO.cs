@@ -11,6 +11,8 @@ namespace apiFlagrancia.DTOs
         [Required]
         public String Nombre { get; set; }
         public String Documento { get; set; }
+        public String Nacionalidad { get; set; }
+        public String Genero { get; set; }
         public String SituacionJuridica { get; set; }
         public String Sentencia { get; set; }
         public String SentenciaDET { get; set; }

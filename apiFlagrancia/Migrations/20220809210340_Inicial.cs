@@ -2,7 +2,7 @@
 
 namespace apiFlagrancia.Migrations
 {
-    public partial class inicial : Migration
+    public partial class Inicial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -26,6 +26,8 @@ namespace apiFlagrancia.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Nombre = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Nacionalidad = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Genero = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Documento = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     SituacionJuridica = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Sentencia = table.Column<string>(type: "nvarchar(max)", nullable: true),
@@ -33,9 +35,9 @@ namespace apiFlagrancia.Migrations
                     Audiencia = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Acusacion = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Descripcion = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    tipoArresto = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Latitud = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Longitud = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    tipoArresto = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     UsuarioRegistro = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     FecRegistro = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     EstadoFlagrante = table.Column<string>(type: "nvarchar(max)", nullable: true),

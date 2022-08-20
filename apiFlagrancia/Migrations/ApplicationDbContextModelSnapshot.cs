@@ -91,10 +91,16 @@ namespace apiFlagrancia.Migrations
                     b.Property<string>("FecRegistro")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Genero")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Latitud")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Longitud")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Nacionalidad")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Nombre")
